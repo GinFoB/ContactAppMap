@@ -15,5 +15,6 @@ import CoreData
 extension Contact {
 
     @NSManaged var timeStamp: NSDate?
+    @NSManaged var identifier: String?
 
 }

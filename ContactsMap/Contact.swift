@@ -12,8 +12,36 @@ import Contacts
 
 
 class Contact: NSManagedObject {
+    
+    let store = CNContactStore()
 
-// Insert code here to add functionality to your managed object subclass
+    var name: String { get {
+        if identifier != nil {
+            do {
+                
+                let style = CNContactFormatterStyle.FullName
+                let contact = try store.unifiedContactWithIdentifier(identifier!, keysToFetch:
+                    [CNContactFormatter.descriptorForRequiredKeysForStyle(style)])
+                return CNContactFormatter.stringFromContact(contact, style: style) ?? "###"
+            }
+            catch{
+                print(error)
+            }
+        }
+        return "Not Found"
+        }
+    }
+    
+    
+    func contactWithKeys(keysToFetch: [CNKeyDescriptor]) throws -> CNContact? {
+        var unifiedContact: CNContact?
+        do {
+            unifiedContact = try store.unifiedContactWithIdentifier(identifier!, keysToFetch:keysToFetch)
+        } catch let error as NSError {
+            throw error
+        }
+        return unifiedContact
+    }
 
     
     final class func EntityName() -> String {

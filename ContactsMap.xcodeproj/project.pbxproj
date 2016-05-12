@@ -27,6 +27,7 @@
 		0E426F511CC7BFAE0019AB12 /* ContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E426F501CC7BFAE0019AB12 /* ContactsDelegate.swift */; };
 		0E426F521CC7BFAE0019AB12 /* ContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E426F501CC7BFAE0019AB12 /* ContactsDelegate.swift */; };
 		0E426F531CC7BFAE0019AB12 /* ContactsDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E426F501CC7BFAE0019AB12 /* ContactsDelegate.swift */; };
+		0E426F591CC7DDD40019AB12 /* ContactSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0E426F581CC7DDD40019AB12 /* ContactSegue.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -67,6 +68,7 @@
 		0E426F461CC7BA8B0019AB12 /* Contacts.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Contacts.framework; path = System/Library/Frameworks/Contacts.framework; sourceTree = SDKROOT; };
 		0E426F471CC7BA8B0019AB12 /* ContactsUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ContactsUI.framework; path = System/Library/Frameworks/ContactsUI.framework; sourceTree = SDKROOT; };
 		0E426F501CC7BFAE0019AB12 /* ContactsDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsDelegate.swift; sourceTree = "<group>"; };
+		0E426F581CC7DDD40019AB12 /* ContactSegue.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactSegue.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				0E426F501CC7BFAE0019AB12 /* ContactsDelegate.swift */,
+				0E426F581CC7DDD40019AB12 /* ContactSegue.swift */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -314,6 +317,7 @@
 			files = (
 				0E426F421CC7B8BF0019AB12 /* Contact.swift in Sources */,
 				0E426F0A1CC7B4B40019AB12 /* AppDelegate.swift in Sources */,
+				0E426F591CC7DDD40019AB12 /* ContactSegue.swift in Sources */,
 				0E426F0D1CC7B4B40019AB12 /* ContactsMap.xcdatamodeld in Sources */,
 				0E426F0F1CC7B4B40019AB12 /* MasterViewController.swift in Sources */,
 				0E426F3F1CC7B8BF0019AB12 /* Contact+CoreDataProperties.swift in Sources */,
@@ -551,6 +555,7 @@
 				0E426F351CC7B4B40019AB12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E426F361CC7B4B40019AB12 /* Build configuration list for PBXNativeTarget "ContactsMapTests" */ = {
 			isa = XCConfigurationList;
@@ -559,6 +564,7 @@
 				0E426F381CC7B4B40019AB12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0E426F391CC7B4B40019AB12 /* Build configuration list for PBXNativeTarget "ContactsMapUITests" */ = {
 			isa = XCConfigurationList;
@@ -567,6 +573,7 @@
 				0E426F3B1CC7B4B40019AB12 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

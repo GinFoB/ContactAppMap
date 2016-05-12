@@ -8,8 +8,11 @@
 
 import UIKit
 import ContactsUI
+import CoreData
 
 class ContactsDelegate: NSObject, CNContactPickerDelegate {
+    
+    var fetchedResultsController: NSFetchedResultsController?
     
     final func picker() -> CNContactPickerViewController {
         let picker = CNContactPickerViewController()
@@ -21,7 +24,26 @@ class ContactsDelegate: NSObject, CNContactPickerDelegate {
 
     
     func contactPicker(picker: CNContactPickerViewController, didSelectContact contact: CNContact){
-        print(contact)
+       
+        
+        if let entity = fetchedResultsController?.fetchRequest.entity,
+            let context = fetchedResultsController?.managedObjectContext{
+            if let contactMO = NSEntityDescription.insertNewObjectForEntityForName(entity.name!, inManagedObjectContext: context) as? Contact {
+                    contactMO.timeStamp = NSDate()
+                    contactMO.identifier = contact.identifier
+                
+                do {
+                    try context.save()
+                } catch {
+                    
+                    abort()
+                }
+
+            }
+            
+        }
+        
     }
     
 }
+
